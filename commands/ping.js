@@ -1,7 +1,8 @@
 module.exports = {
     name: 'ping',
     description: "this is a ping command!",
+    permissions:[],
     execute(client, message, args){
-        message.channel.send('pogster!');
+        message.reply('pogster!');
     }
 }

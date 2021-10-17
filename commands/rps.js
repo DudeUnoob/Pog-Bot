@@ -4,8 +4,9 @@ module.exports = {
 
     name: 'rps',
     description: 'A game of rock, paper, scissors!',
+    permissions:[],
 
-    async execute(client,message,args,Discord){
+    async execute(client,message,cmd,args,Discord){
         const acceptedReplies = ['rock', 'paper', 'scissors'];
         const random = Math.floor((Math.random() * acceptedReplies.length));
         const result = acceptedReplies[random];
