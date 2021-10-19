@@ -1,4 +1,5 @@
 const fetch = require('node-fetch')
+const discordEmoji = require('discord-emoji');
 
    module.exports = {
        name:'meme',
@@ -15,8 +16,8 @@ const fetch = require('node-fetch')
          embed.setURL(data.postLink)
          embed.setColor('RANDOM')
          embed.setAuthor('u/' + data.author)
-         embed.setFooter('Upvotes: ' + data.ups)
+         embed.setFooter('⬆️ ' + data.ups)
          embed.setImage(data.url)
-          message.reply({embeds: [embed]});
+         message.reply({embeds: [embed]});
        }
    }

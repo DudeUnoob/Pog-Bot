@@ -4,7 +4,7 @@ const axios = require('axios');
       name: 'quote',
       description: 'A random quote',
       permissions:[],
-      async execute(client, message,args, Discord){
+      async execute(client, message,cmd,args, Discord){
         const quote = await axios.get('https://zenquotes.io/api/random');
         
         
