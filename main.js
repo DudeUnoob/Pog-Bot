@@ -11,7 +11,7 @@ app.listen(port, () => console.log(`Example app listening at http://local host:$
 const Discord = require('discord.js');
 
 const client = new Discord.Client({ intents: 32767 });
-
+  
 
 
 const fs = require('fs');
@@ -23,6 +23,7 @@ client.events = new Discord.Collection();
 ['command_handler', 'event_handler'].forEach(handler => {
   require(`./handlers/${handler}`)(client, Discord);
 })
+
 
 
 client.login('ODkzNTg4OTg0ODI2MDQ0NDQ2.YVdpmA.y9xreGf3S50noHLgdr-twSrNQ3A');

@@ -23,6 +23,9 @@ module.exports = {
             {name: 'command 11', value: '$clear'},
             {name: 'command 12', value: '$kick and $ban'},
             {name: 'commands 13', value:'/ping, /server, /user'},
+            {name: 'commands 14', value: '-help'},
+            {name: 'command 15', value:'$dp'},
+            {name: 'commands 16', value:'$snake, $ttt (specify a user to play with), $connect4 (specify a user to play with)'},
         )
         .setImage('https://cdn.discordapp.com/attachments/877348155681820702/896937219112181860/image0.png')
         .setFooter('Feel free to use these commands! a lot more coming in the future - coded by @DudeUnoob :). Credit to Air#0967 for making the');

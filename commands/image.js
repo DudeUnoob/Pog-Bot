@@ -20,6 +20,17 @@ module.exports = {
         
         if (!res) return message.channel.send('Unable to fetch the requested image.');
         if (res.status >= 400) return message.channel.send(`Error ${res.status}: ${res.statusText}`);
+        
+         let blacklisted = ['sex','slave','racist','porn','sex slave','penis','cock','boobs','ass','thighs','hentai','dick','dildo','naked','nigger','nigga','racist','bitch','fuck','tits','asshole','butthole','pussy','vagina','masturbate','masturbation'];
+    let foundInText = false;
+    for (var i in blacklisted) {
+      if (message.content.toLowerCase().includes(blacklisted[i].toLowerCase())) foundInText = true;
+    }
+    if (foundInText) {
+      message.delete();
+      message.channel.send('Bro really??? nsfw??? go do that somewhere else...');
+      return;
+    }
 
         res = await res.json();
         if (!res.items?.length) return message.channel.send('No results found.');

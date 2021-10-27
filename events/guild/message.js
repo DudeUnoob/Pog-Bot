@@ -7,7 +7,11 @@ module.exports = (Discord, client, message) => {
 
     const command = client.commands.get(cmd) || client.commands.find(a => a.aliases && a.aliases.includes(cmd));
 
-    if(command) command.execute(client, message,cmd, args, Discord);
+    if(command) {
+      command.execute(client, message,cmd, args, Discord);
+    
+  
+ 
 
     const validPermissions = ["CREATE_INSTANT_INVITE",
     "KICK_MEMBERS",
@@ -56,6 +60,10 @@ module.exports = (Discord, client, message) => {
     if (invalidPerms.length){
         return message.channel.send(`Missing Permissions: \` ${invalidPerms}\``);
     }
+
 }
+}
+
+    
    
 }

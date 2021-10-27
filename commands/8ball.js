@@ -16,6 +16,7 @@ module.exports = {
         .addField("Question",question)
         .addField("Answer",replies[result])
 
+        console.log('result: ' + replies[result].toString());
         message.reply({embeds: [ballembed]});
     }
 }

@@ -16,7 +16,7 @@ const discordEmoji = require('discord-emoji');
          embed.setURL(data.postLink)
          embed.setColor('RANDOM')
          embed.setAuthor('u/' + data.author)
-         embed.setFooter('⬆️ ' + data.ups)
+         embed.setFooter('👍 ' + data.ups)
          embed.setImage(data.url)
          message.reply({embeds: [embed]});
        }
