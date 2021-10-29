@@ -13,7 +13,7 @@ module.exports = {
         color: '#5865F2',
         OverTitle: "Game Over",
         },
-        snake: { head: '🟢', body: '🟩', tail: '🟢' },
+        snake: { head: '🟢', body: '🟩', tail: '🔺' },
         emojis: {
           board: '⬛',
           food: '🍎',
